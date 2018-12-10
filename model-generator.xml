@@ -11,7 +11,7 @@
 		<!-- 配置数据库连接 -->
 		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
 			connectionURL="jdbc:mysql://localhost:3306/monkey" userId="root"
-			password="123456">
+			password="root">
 		</jdbcConnection>
 
 		<javaTypeResolver>
@@ -39,6 +39,6 @@
 
 
 		<!-- table指定每个表的生成策略 -->
-		<table tableName="tbl_emp" domainObjectName="Employee"></table>
+		<table tableName="users" domainObjectName="User"></table>
 	</context>
 </generatorConfiguration>

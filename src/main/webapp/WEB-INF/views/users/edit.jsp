@@ -1,6 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
+<%@page import="java.util.HashMap"%>
+<%@page import="java.util.Map"%>
+
 
 <%
 String path = request.getContextPath();
@@ -12,11 +16,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <head>
 <base href="<%=basePath%>">
 <meta charset="UTF-8">
-<title>Index</title>
+<title>編輯</title>
 <%@ include file="/WEB-INF/views/layouts/common.jsp"%>
 </head>
 <body>
 
-<a href="users" class="btn btn-primary">用戶列表</a>
+<%@ include file="/WEB-INF/views/users/_form.jsp"%>
+
 </body>
 </html>
