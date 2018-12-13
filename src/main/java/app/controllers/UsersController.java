@@ -18,14 +18,14 @@ import org.springframework.web.context.request.RequestScope;
 
 
 import app.models.User;
-import app.services.UserService;
+import app.services.UsersService;
 
 @Controller
 @RequestMapping("/users")
-public class UserController {
+public class UsersController {
 
 	@Autowired
-	UserService userService;
+	UsersService userService;
 	
 	@ModelAttribute
 	public void getUser(@RequestParam(value="id", required=false) Integer id, Map<String, Object> map) {
@@ -41,11 +41,11 @@ public class UserController {
 		return "users/index";
 	}
 	
-	@RequestMapping("/new")
+/*	@RequestMapping("/new")
 	public String fresh(Map<String, Object> map) {
 		map.put("user", new User());
 		return "users/new";
-	}
+	}*/
 	
 	@RequestMapping(value="/{id}")
 	public String show(@PathVariable("id") Integer id, Map<String, Object> map) {
@@ -65,8 +65,8 @@ public class UserController {
 		return "redirect:/users";
 	}
 	
-	//创建完返回id
-	@RequestMapping(value="", method=RequestMethod.POST)
+	//todo创建完返回id
+/*	@RequestMapping(value="", method=RequestMethod.POST)
 	public String create(@Valid User user, Errors result, Map<String, Object> map) {
 		if(result.getErrorCount() > 0){
 			for(FieldError error:result.getFieldErrors()){
@@ -77,7 +77,7 @@ public class UserController {
 		}
 		userService.createUser(user);
 		return "redirect:/users";
-	}
+	}*/
 	
 	@RequestMapping(value="", method=RequestMethod.PUT)
 	public String update(@Valid User user, Errors result, Map<String, Object> map) {

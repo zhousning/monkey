@@ -13,7 +13,7 @@
 		<!--只扫描控制器和advice。 -->
 		<context:include-filter type="annotation"
 			expression="org.springframework.stereotype.Controller" />
-		<context:include-filter type="annotation"
+		 <context:include-filter type="annotation"
 			expression="org.springframework.web.bind.annotation.ControllerAdvice" />
 	</context:component-scan>
 

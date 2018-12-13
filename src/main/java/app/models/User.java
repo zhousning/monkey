@@ -1,14 +1,16 @@
 package app.models;
 
+
 import org.hibernate.validator.constraints.Email;
+import org.hibernate.validator.constraints.NotEmpty;
 
 public class User {
     private Integer id;
-
     private String name;
+    @NotEmpty
     @Email
     private String email;
-
+    @NotEmpty
     private String password;
     
     
@@ -22,9 +24,8 @@ public class User {
 		super();
 	}
 
-	public User(Integer id, String name, String email, String password) {
+	public User(String name, String email, String password) {
 		super();
-		this.id = id;
 		this.name = name;
 		this.email = email;
 		this.password = password;

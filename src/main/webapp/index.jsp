@@ -18,5 +18,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <body>
 
 <a href="users" class="btn btn-primary">用戶列表</a>
+<a href="users/sign_in">登录</a>
+<a href="users/sign_up">注册</a>
 </body>
 </html>
